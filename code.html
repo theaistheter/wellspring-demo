@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellSpring - General Health Information Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="logo">WellSpring</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#health">Health Info</a>
+        <a href="#tips">Tips</a>
+        <a href="#register">Register</a>
+    </nav>
+</header>
+
+<main>
+    <!-- HOME -->
+    <section id="home" class="hero">
+        <h1>General Health Information for Better Everyday Wellness</h1>
+        <p>WellSpring provides clear, responsible, and understandable general health information for students and community members. For school-based academic testing and demonstration only.</p>
+        <div class="disclaimer-box">
+            <strong>Important Notice:</strong> All content on this website is for general information and educational purposes only and is NOT a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified health professional.
+        </div>
+        <a href="#register" class="btn">Go to Demo Registration Form</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section light">
+        <h2>About This Website</h2>
+        <p><strong>Purpose:</strong> This website was created as a Performance Task to demonstrate HTML, CSS, and JavaScript skills while presenting responsible general health information.</p>
+        <p><strong>Intended Audience:</strong> Junior and Senior High School students, teachers, and parents looking for basic wellness information for academic purposes.</p>
+        <p><strong>Academic Use Only:</strong> This site does not offer real medical services. The registration form is a demonstration of form design and validation only.</p>
+    </section>
+
+    <!-- HEALTH INFO - 3 TOPICS -->
+    <section id="health" class="section">
+        <h2>General Health Information</h2>
+        <div class="cards">
+            <article class="card">
+                <h3>1. Balanced Nutrition</h3>
+                <p>General guidance includes eating a variety of fruits, vegetables, whole grains, and lean proteins, and drinking adequate water. Maintaining regular meal times can support energy levels.</p>
+                <p class="source">Source: World Health Organization (WHO) - Healthy Diet Fact Sheet; Department of Health Philippines - Pinggang Pinoy Guide</p>
+            </article>
+            <article class="card">
+                <h3>2. Regular Physical Activity</h3>
+                <p>WHO recommends that children and adolescents get an average of 60 minutes per day of moderate-to-vigorous physical activity. For adults, 150 minutes of moderate activity per week is a common general reference. Simple activities like walking, stretching, and play-based movement count.</p>
+                <p class="source">Source: WHO Physical Activity Guidelines 2020; Centers for Disease Control and Prevention (CDC) - Physical Activity Basics</p>
+            </article>
+            <article class="card">
+                <h3>3. Mental Well-being and Sleep</h3>
+                <p>General wellness includes getting 7-9 hours of quality sleep for adults and 8-10 hours for teenagers, taking regular breaks from screens, practicing deep breathing, and talking to trusted family, friends, or school counselors when stressed.</p>
+                <p class="source">Source: CDC - About Sleep; WHO - Mental Health: Strengthening Our Response</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- TIPS -->
+    <section id="tips" class="section light">
+        <h2>Health Tips & Trustworthy Resources</h2>
+        <ul class="tips-list">
+            <li><strong>Stay Hydrated:</strong> Bring a reusable water bottle to school.</li>
+            <li><strong>Move Every Hour:</strong> Stand and stretch between study periods.</li>
+            <li><strong>Practice Hand Hygiene:</strong> Wash hands with soap for at least 20 seconds.</li>
+            <li><strong>Screen Time Break:</strong> Follow the 20-20-20 rule for eye rest.</li>
+        </ul>
+        <h4>Learn More From Credible Sources (External Links):</h4>
+        <div class="links">
+            <a href="https://www.who.int/health-topics" target="_blank" rel="noopener">WHO - Health Topics</a>
+            <a href="https://www.cdc.gov/healthyliving/" target="_blank" rel="noopener">CDC - Healthy Living</a>
+            <a href="https://doh.gov.ph/" target="_blank" rel="noopener">DOH Philippines</a>
+        </div>
+    </section>
+
+    <!-- CUSTOM REGISTRATION FORM -->
+    <section id="register" class="section">
+        <h2>Demo Registration Form</h2>
+        <p>This is a <strong>student-coded demonstration form only</strong>. Do not enter real medical records, ID numbers, or passwords. Use fictional sample data.</p>
+        
+        <form id="healthForm" novalidate>
+            <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" placeholder="e.g., Juan Dela Cruz (Sample)">
+                <span class="error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Sample Email *</label>
+                <input type="email" id="email" placeholder="e.g., sample@school.edu">
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="grade">Grade Level / Role</label>
+                <select id="grade">
+                    <option value="">-- Select --</option>
+                    <option>Grade 11</option>
+                    <option>Grade 12</option>
+                    <option>Teacher / Evaluator</option>
+                    <option>Guest (Demo)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Health Topic of Interest *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="topic" value="Nutrition"> Nutrition</label>
+                    <label><input type="radio" name="topic" value="Physical Activity"> Physical Activity</label>
+                    <label><input type="radio" name="topic" value="Mental Well-being"> Mental Well-being</label>
+                </div>
+                <span class="error" id="topicError"></span>
+            </div>
+            <div class="form-group">
+                <label for="message">Why are you interested? (Optional, Demo Message)</label>
+                <textarea id="message" rows="3" placeholder="Sample message only..."></textarea>
+            </div>
+            <div class="form-group checkbox">
+                <label><input type="checkbox" id="agree"> I understand this is for academic testing and not a real medical service. *</label>
+                <span class="error" id="agreeError"></span>
+            </div>
+            <button type="submit" class="btn">Submit Demo Registration</button>
+            <button type="reset" class="btn secondary">Reset</button>
+        </form>
+
+        <!-- FORM RESPONSE -->
+        <div id="confirmation" class="confirmation hidden">
+            <h3>✓ Demo Registration Received</h3>
+            <p id="reviewMessage"></p>
+            <p><em>This message is generated locally in your browser by JavaScript for demonstration. No information was saved or sent to a server, as there is no teacher-approved backend for this demo.</em></p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section light">
+        <h2>Contact / School Details</h2>
+        <p><strong>Sample Contact Only - Fictional:</strong></p>
+        <p>WellSpring Student Project - Dipolog City Senior High School (Demo)<br>
+        Email: wellspringsample.project@school-demo.edu.ph<br>
+        Address: Sample Academic Street, Dipolog City, Zamboanga del Norte (Fictional)</p>
+        <p>All images used are open-license icons. Content references are credited above.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 WellSpring - Academic Performance Task | For demonstration within school premises only | Not for public medical use.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
